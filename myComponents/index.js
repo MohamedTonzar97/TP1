@@ -48,6 +48,20 @@ template.innerHTML = `
       margin-left:22%;
       color:grey;
     }
+
+    progress
+    {
+      background-color: #eee;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+  width: 300px;
+    }
+    .prog{
+      display: block;
+      margin-left:40%;
+      margin-right: auto;
+      width: 10%;
+    }
   </style>
 
   
@@ -60,9 +74,9 @@ template.innerHTML = `
     <button id="pauseButton" ><img src="./assets/imgs/pause.png" style="Width:40px"></button>
     <button id="mute"><img src="./assets/imgs/mute.png" style="Width:40px"></button>
     <button id="replay"><img src="./assets/imgs/replay.png" style="Width:40px"></button>
+    
+    
     </div>
-    
-    
     <div class="WebaudioCustom">
     <webaudio-knob id="knobVolume" tooltip="Volume:%s" src="./assets/imgs/LittlePhatty.png" sprites="100" value=0.5 min="0" max="1" step=0.01>
     Volume</webaudio-knob>
@@ -70,10 +84,11 @@ template.innerHTML = `
     <webaudio-knob id="knobStereo" tooltip="Balance:%s" src="./assets/imgs/balance.png" sprites="127" value=0 min="-1" max="1" step=0.01>
     Balance G/D</webaudio-knob>
 
+   
     </div>
-
+    <div class="prog">
     <progress id="progressRuler" max=100 value=0 step=1 ></progress>
-
+    </div>
       <canvas id="myCanvas" ></canvas>
 
       <div class="equalizer">
